@@ -6,7 +6,7 @@ const AddUsers = () => {
     const handleAddUser = event =>{
         event.preventDefault();
         console.log(user)
-        fetch('http://localhost:5000/users',{
+        fetch('https://todo-list-server-nine.vercel.app/users',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

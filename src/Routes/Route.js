@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
             {
                 path:'/',
                 element: <PrivateRoute><Home></Home></PrivateRoute>,
-                loader:()=> fetch('http://localhost:5000/users')
+                loader:()=> fetch('https://todo-list-server-nine.vercel.app/users')
             },
             {
                 path:'/login',
@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
               {
                 path:'/update/:id',
                 element: <Update></Update>,
-                loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
+                loader: ({params}) => fetch(`https://todo-list-server-nine.vercel.app/users/${params.id}`)
               }
             
         ]

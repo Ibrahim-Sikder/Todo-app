@@ -10,7 +10,7 @@ const Home = () => {
         const agree = window.confirm(`Are you sure you want to delete: ${user.name}`)
         if(agree){
            
-            fetch(`http://localhost:5000/users/${user._id}`,{
+            fetch(`https://todo-list-server-nine.vercel.app/users/${user._id}`,{
                 method: 'DELETE'
             })
             .then(res=>res.json())
