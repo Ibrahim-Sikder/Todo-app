@@ -1,0 +1,265 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.box{
+    position: relative;
+    width:380px;
+    height:500px;
+    margin:auto;
+    background:#081c15;
+    border-radius:8px;
+    overflow:hidden;
+    
+}
+.box::before{
+    content:'';
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background:linear-gradient(0deg,transparent,transparent,green,green,#45f345);
+    z-index:1;
+
+    animation:animate 6s linear infinite;
+    transform-origin:bottom right;
+    -webkit-animation:animate 6s linear infinite;
+}
+.box::after{
+    content:'';
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background:linear-gradient(0deg,transparent,transparent,#FF9F29,#FF9F29,#FF9F29);
+    z-index:1;
+    animation-delay:-3s;
+    animation:animate 6s linear infinite;
+    transform-origin:bottom right;
+    -webkit-animation:animate 6s linear infinite;
+}
+.borderLine{
+    position:absolute;
+    top:0;
+    inset:0;
+}
+.borderLine::before{
+    content:'';
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background:linear-gradient(0deg,transparent,transparent,red,red,red);
+    z-index:1;
+    animation-delay:-1.5s;
+    animation:animate 6s linear infinite;
+    transform-origin:bottom right;
+    -webkit-animation:animate 6s linear infinite;
+
+}
+.borderLine::after{
+    content:'';
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background:linear-gradient(0deg,transparent,transparent,#11B57E,#11B57E,#11B57E);
+    z-index:1;
+    animation-delay:-4.5s;
+    animation:animate 6s linear infinite;
+    transform-origin:bottom right;
+    -webkit-animation:animate 6s linear infinite;
+
+}
+@keyframes animate{
+    0%{
+        transform:rotate(0deg)    ;
+        -webkit-transform:rotate(0deg)    ;
+        -moz-transform:rotate(0deg)    ;
+        -ms-transform:rotate(0deg)    ;
+        -o-transform:rotate(0deg)    ;
+}
+100%{
+    transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+}
+}
+.box form{
+    position:absolute;
+    inset:4px;
+    background:#081c15;
+    padding:50px 40px;
+    border-radius:8px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    -ms-border-radius:8px;
+    -o-border-radius:8px;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+}
+.box form h2{
+    color:#fff;
+    font-weight:500;
+    text-align:center;
+    letter-spacing:0.1em;
+}
+.box form .inputBox{
+    position: relative;
+    width:300px;
+    margin-top:35px;
+
+}
+.box form .inputBox input{
+    position: relative;
+    width:100%;
+    padding:20px 10px 10px;
+    background: transparent;
+    outline:none;
+    box-shadow:none;
+    color:#23242a;
+    font-size:1em;
+    letter-spacing: 0.05em;
+    transition:0.5s;
+    border:none;
+    z-index: 10 !important;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+}
+.box form .inputBox span{
+    position: absolute;
+    left:0;
+    padding:10px 0px 10px ;
+    pointer-events:none;
+    color:#8f8f8f;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    transition:.5s;
+    -webkit-transition:.5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
+    -o-transition:.5s;
+}
+
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span{
+    color:#fff;
+    font-size:1.2em;
+    transform:translateY(-34px);
+    -webkit-transform:translateY(-34px);
+    -moz-transform:translateY(-34px);
+    -ms-transform:translateY(-34px);
+    -o-transform:translateY(-34px);
+}
+.box form .inputBox i{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:2px;
+    background:#fff;
+    overflow: hidden;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    overflow:hidden;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    overflow:hidden;
+    -o-transition:0.5s;
+    pointer-events:none;
+}
+.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i{
+    height:44px;
+}
+.box form .links{
+    display: flex;
+    justify-content: space-between;
+}
+.box form .links p{
+    margin:10px 0;
+    font-size:1em;
+    color:#8f8f8f;
+    text-decoration:none;
+}
+.box form .links a:hover,
+.box form .links a:nth-child(2){
+    color:#fff;
+}
+.box form  input[type='submit']{
+    border:none;
+    outline:none;
+    padding:9px 25px;
+    background:#fff;
+    cursor:pointer;
+    border-radius:4px;
+    font-size:0.9em;
+    font-weight: 600;
+    width:100px;
+    margin-top:10px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+}
+.box form input[type='submit']:active{
+    opacity:0.8;
+}
+
+@media only screen and (max-width:768px){
+    .box{
+        width:400px;
+        height:500px;
+        margin-left:-100px;
+}
+.box form .inputBox{
+    position: relative;
+    width:100%;
+
+}
+
+}
+@media only screen and (max-width:500px){
+    .box{
+        width:300px;
+        height:450px;
+}
+.box form .inputBox input{
+    width:100%;
+    padding:5px 10px 10px;
+    
+}
+.box form .inputBox span{
+    position: absolute;
+    left:0;
+    bottom:4px;
+
+    
+}
+.box form .inputBox i{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:1px;
+    
+}
+
+}
