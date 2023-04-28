@@ -42,15 +42,15 @@ const [passwordError, setPasswordError] = useState('')
 
     }
     return (
-        <div className='w-1/4 m-auto text-center mb-10 my-24'>
-            <h1 className='text-3xl my-3 font-bold text-white'>Register now</h1>
+        <div className='w-3/5 mx-auto mb-10 my-24 '>
+            <h1 className='text-3xl my-3 font-bold text-white text-center'>Register now</h1>
             <div className='box pb-5'>
           <span className="borderLine"></span>
-           <form className='pb-10' onSubmit={handleRegister}>
-           <h2>Sign Up</h2>
+           <form className='pb-10 mx-auto' onSubmit={handleRegister}>
+           <h2>Register</h2>
            <div className="inputBox">
                 <input type="text" name='firstName' required />
-                <span>User Name</span>
+                <span className='text-white'>User Name</span>
                 <i></i>
            </div>
            <div className="inputBox">

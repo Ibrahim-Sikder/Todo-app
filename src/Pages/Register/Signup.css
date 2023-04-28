@@ -9,7 +9,7 @@
     position: relative;
     width:380px;
     height:500px;
-    margin:auto;
+    margin:0 auto;
     background:#081c15;
     border-radius:8px;
     overflow:hidden;
@@ -227,7 +227,7 @@
     .box{
         width:400px;
         height:500px;
-        margin-left:-100px;
+        margin-left:-30px !important;
 }
 .box form .inputBox{
     position: relative;
@@ -240,6 +240,7 @@
     .box{
         width:300px;
         height:450px;
+       
 }
 .box form .inputBox input{
     width:100%;
