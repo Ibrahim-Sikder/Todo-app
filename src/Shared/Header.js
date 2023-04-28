@@ -12,7 +12,7 @@ const Header = () => {
   }
 
     const menuItems = <React.Fragment>
-        <li><Link to='/' href="#">View Todo</Link></li>
+        <li><Link to='/' href="#">View Todo Item</Link></li>
         <li><Link to='/adduser' href="#">Add Todo Item</Link></li>
         {
           user?.email ? 
@@ -35,7 +35,7 @@ const Header = () => {
        
       </ul>
     </div>
-    <Link to='https://dashing-belekoy-f4b6d5.netlify.app/' className="btn btn-ghost normal-case text-3xl bold">Ibrahim Sikder</Link>
+    <Link to='https://dashing-belekoy-f4b6d5.netlify.app/' className="btn btn-ghost normal-case text-3xl bold">Todo App</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
